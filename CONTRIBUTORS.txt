@@ -1,0 +1,8 @@
+This file contains a list of people who have made large contributions
+to the public version of ShaderFlow.
+
+Original ShaderFlow design and implementation:
+    Dhruv Joshi <joshidhruv997@gmail.com>
+    Pruthvirajsinh Parmar <pruthvi9788@gmail.com>
+    Breej Vania <breejvania@gmail.com>
+    Deep Desai <deepdesai21.dd@gmail.com>
