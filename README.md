@@ -6,7 +6,7 @@
 ---
 
 ## Requirements
----
+
 [Python 2.7](https://www.python.org) _(Make sure to download and install the 2.7.x version)_
 
 [wxPython Phoenix](https://www.wxpython.org)
