@@ -9,6 +9,6 @@ setup(
     version = "0.0.1",
     author = "Dhruv Joshi",
     author_email = "dhruvjoshi997@gmail.com",
-    description = ("A node-based shader editor.")
+    description = ("A node-based shader editor."),
     long_description = read("README.md")
 )

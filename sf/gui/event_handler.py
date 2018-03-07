@@ -2,14 +2,15 @@ def OnNewWindow(evt):
     """
     Creates a totally new window instance.
     """
-    import main_window
-    main_window.SFWindow(None)
+    from ..main_app import main
+    main()
 
 def OnQuit(evt):
     """
     Exits the current window instance.
     """
     menuObj = evt.GetEventObject()
+    evt.Skip()
     menuObj.GetWindow().Close()
 
 def OnAbout(evt):

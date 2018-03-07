@@ -1,10 +1,11 @@
 import wx
 
+from menu import Menu
 import event_handler as SFEvt
 
-class SFMenuBar(wx.MenuBar):
+class MenuBar(wx.MenuBar):
     def __init__(self, *args, **kwargs):
-        super(SFMenuBar, self).__init__(*args, **kwargs)
+        super(MenuBar, self).__init__(*args, **kwargs)
         # allocate all custom ids (if any) before using them
         self.register_ids()
         self.create()
@@ -20,7 +21,7 @@ class SFMenuBar(wx.MenuBar):
         """
         Creates and attaches the menubar to the main application window.
         """
-        self.fileMenu = SFMenu()
+        self.fileMenu = Menu()
         ITEM_LIST = [
             # [stockItem: bool, stockID or separator or (newItem: tuple)]
             [True, wx.ID_NEW],
@@ -33,7 +34,7 @@ class SFMenuBar(wx.MenuBar):
         ]
         self.fileMenu.add_items(ITEM_LIST)
 
-        self.editMenu = SFMenu()
+        self.editMenu = Menu()
         ITEM_LIST = [
             [True, wx.ID_UNDO],
             [True, wx.ID_REDO],
@@ -44,7 +45,7 @@ class SFMenuBar(wx.MenuBar):
         ]
         self.editMenu.add_items(ITEM_LIST)
 
-        self.helpMenu = SFMenu()
+        self.helpMenu = Menu()
         ITEM_LIST = [
             [True, wx.ID_ABOUT],
             [True, wx.ID_HELP]
@@ -63,26 +64,3 @@ class SFMenuBar(wx.MenuBar):
         self.GetFrame().Bind(wx.EVT_MENU, SFEvt.OnNewWindow, id=self.ID_NewWindow)
         self.GetFrame().Bind(wx.EVT_MENU, SFEvt.OnQuit, id=wx.ID_EXIT)
         self.GetFrame().Bind(wx.EVT_MENU, SFEvt.OnAbout, id=wx.ID_ABOUT)
-
-
-class SFMenu(wx.Menu):
-    def __init__(self, *args, **kwargs):
-        super(SFMenu, self).__init__(*args, **kwargs)
-
-    def add_items(self, items):
-        """
-        Extracts the menu items and adds them to it.
-        If the menu item is a custom one, then registers its accelerator (aka shortcut/key-combination).
-        """
-        for item in items:
-            if item[0]:
-                # it's a wx stock item
-                if item[1] == wx.ID_SEPARATOR:
-                    self.AppendSeparator()
-                    continue
-                self.Append(item[1])
-            else:
-                # it's a custom item
-                # TODO: register the new accelerator
-                itemId, itemLabel, itemAccel = item[1]
-                self.Append(itemId, '&' + itemLabel + '\t' + itemAccel)

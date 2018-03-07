@@ -1,10 +1,10 @@
 import wx
 
-from menu_bar import SFMenuBar
+from menu_bar import MenuBar as SFMenuBar
 
-class SFWindow(wx.Frame):
+class Window(wx.Frame):
     def __init__(self, *args, **kwargs):
-        super(SFWindow, self).__init__(*args, **kwargs)
+        super(Window, self).__init__(*args, **kwargs)
         self.init_ui()
 
     def init_ui(self):
@@ -18,5 +18,4 @@ class SFWindow(wx.Frame):
         self.SetMenuBar(menuBar)
         menuBar.bind_events()
 
-        self.SetTitle("Shader Flow")
         self.Show()
