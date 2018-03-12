@@ -1,0 +1,12 @@
+from wx.lib.embeddedimage import PyEmbeddedImage
+
+GridBG = PyEmbeddedImage(
+    b"iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAABHNCSVQICAgIfAhkiAAAAX9J"
+    b"REFUeJzt3FtqgjEUAOGjBi+tgpt3C751b4XaakXRDYRfiJOQwHyPDVgZCByStLPD8esRwqSI"
+    b"iP1um138/jnF52adXfs9XybX1qtldu3yfy3+zBHW5tmfqphBYQaFGRRmUNjMsYmVIiLSYpFd"
+    b"vN3vXY1Gpd9zao0eGd3yMIPCDAozKMygMMcmWIqIKiNOjROs0rXtxya7dvo745/plocZFGZQ"
+    b"mEFhBoU5NsGqjU2jrNEnWG55mEFhBoUZFGZQmGMTrNrYVONCbYT3Um55mEFhBoUZFGZQmGMT"
+    b"LEVElUusUS7+fNvUOYPCDAozKMygMMcmWHeXdCOcKE19T7c8zKAwg8IMCjMozLEJ9nJs6ulp"
+    b"d08Xhp42NWJQmEFhBoUZFObYBBvqbVPrv6QrGRnd8jCDwgwKMyjMoDDHJthQ/7dphDHNLQ8z"
+    b"KMygMIPCDApzbIK9ddrU8hSnt4s/x6ZGDAozKMygMIPCHJtg3b1tan2CRf8+tzzMoDCDwgwK"
+    b"MyjsCUFtsOQdiq21AAAAAElFTkSuQmCC")

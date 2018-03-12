@@ -1,6 +1,7 @@
 import wx
 
 from menu_bar import MenuBar as SFMenuBar
+from node_editor_workspace import NodeEditorWorkspace as SFNEW
 
 class Window(wx.Frame):
     def __init__(self, *args, **kwargs):
@@ -17,5 +18,7 @@ class Window(wx.Frame):
         menuBar = SFMenuBar()
         self.SetMenuBar(menuBar)
         menuBar.bind_events()
+
+        nodeview = SFNEW(self)
 
         self.Show()
