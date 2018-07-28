@@ -12,4 +12,6 @@
 [wxPython Phoenix](https://www.wxpython.org)
 
 
-**Note:** This project is currently under heavy development. Keep visiting for the stable version. :smile:
+**Note:** This project is currently under hiatus. Keep visiting for the stable version. :smile:
+
+**Important:** We are solving some issues in the design decisions. The latest development source and a stable release will be provided soon.
